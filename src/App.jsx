@@ -24,7 +24,22 @@ function App() {
     <div className="calculator">
       <div className="display">{input}</div>
       <div className="buttons">
-        {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "-", "*", "/"].map((symbol) => (
+        {["1", "2", "3", "+"].map((symbol) => (
+          <button key={symbol} onClick={() => handleClick(symbol)}>
+            {symbol}
+          </button>
+        ))}
+        {["4", "5", "6", "-"].map((symbol) => (
+          <button key={symbol} onClick={() => handleClick(symbol)}>
+            {symbol}
+          </button>
+        ))}
+        {["7", "8", "9", "*"].map((symbol) => (
+          <button key={symbol} onClick={() => handleClick(symbol)}>
+            {symbol}
+          </button>
+        ))}
+        {["0", "/"].map((symbol) => (
           <button key={symbol} onClick={() => handleClick(symbol)}>
             {symbol}
           </button>
